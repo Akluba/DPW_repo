@@ -1,4 +1,3 @@
-# One conditional statements w/ logical operator
 # At least one function
 
 
@@ -12,13 +11,15 @@ verb = raw_input("Enter a verb (-ing form!) ")
 # Collecting number inputs from user
 countdown_number = raw_input("Enter a number between 1-10 ")
 height_number = raw_input("Now a number between 1-100 ")
-attack_number = raw_input("And finally, a number between 1-3 ")
+attack_number = raw_input("A number between 1-3 ")
+attack2_number = raw_input("And finally, another number between 1-3 ")
 
 # Variable dependant on countdown_number
 patience_level = ''
 
 # Array containing different attacks possible
-attacks = ["head","stomach","butt"]
+attack_area = ["head","stomach","butt"]
+attack_type = ["chops", "punches", "kicks"]
 
 # Dictionary referencing villian to chosen super hero
 villians = dict()
@@ -29,6 +30,24 @@ feet = int(height_number) / 12
 # Mathematical operation 2 - Converting user input number into inches
 inches = int(height_number) % 12
 
+# Function determining amount of damange done with attack combo
+def attack_points(p1, p2):
+	attack_sum = int(p1) + int(p2)
+	print attack_sum
+	if attack_sum == 6:
+		return 100
+	elif attack_sum == 5:
+		return 85
+	elif attack_sum == 4:
+		return 65
+	elif attack_sum == 3:
+		return 45
+	else:
+		return 25
+
+# Calling function	
+damage_done = attack_points(attack_number, attack2_number)
+
 # Condition Statement 1 - discribing villian patience level
 if int(countdown_number) > 8:
 	patience_level = "tolerantly"
@@ -37,21 +56,18 @@ elif int(countdown_number) > 5:
 else:
 	patience_level = "eagerly"
 
- 
-
-# Madlib Section containing -- 
-print "Today started out like any normal day in " + city_name + ". All around are cars driving, birds chirping, children " + verb + ", WAIT! WHAT'S THAT?!"
-
-
-# Madlib Section containing -- 
-
+# Madlib Section containing -- hero_name , city_name , verb , villian name(dictionary) , countdown_number 
+print "Today started out like any normal day in " + city_name + ". All around are cars driving, birds chirping, children " + verb + ", WAIT! WHAT'S THAT?! It's " + villians[hero_name] + ", standing " + str(feet) + " feet " + str(inches) + " inches tall! He demands " + hero_name + " to show his face in " + countdown_number + " seconds and begins to " + patience_level + " count down." 
 
 # Madlib Section containing --  loop
-print "He repeated himself, here"
-# Loop to repeat superhero's name
-i = 0
-while i < int(attack_number):
-	print hero_name + ","
-	i = i+1
-print "in an evil voice."
-
+i = int(countdown_number)
+while i > 0:
+	# Condition Statement 2 - if villian's patience level is either he adds mississippi to the count down
+	if patience_level == "tolerantly" or patience_level == "anxiously":
+		print i, " Mississippi.."
+	else:
+		print i
+	i = i-1
+	
+# Madlib Section containing -- hero_name , villian name(dictionary) , attacks(array)
+print "Out of nowhere " + hero_name + " shows up, " + attack_type[int(attack_number)-1] + " " + villians[hero_name] + " in the " + attack_area[int(attack2_number)-1] + " for a total damage amount of " + str(damage_done) + " points!"
