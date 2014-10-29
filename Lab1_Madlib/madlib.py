@@ -1,4 +1,3 @@
-# At least 2 mathematical operators
 # Two conditional statements
 # At least one function
 
@@ -22,12 +21,17 @@ attacks = ["head","stomach","butt"]
 villians = dict()
 villians = {"Batman":"Bane","Superman":"General Zod","Spiderman":"Green Goblin"}
 
+# Mathematical operation 1 - Converting user input number into feet
+feet = int(height_number) / 12
+# Mathematical operation 2 - Converting user input number into inches
+inches = int(height_number) % 12
 
-
- 
 
 # Madlib Section containing -- 
 print "Today started out like any normal day in " + city_name + ". All around are cars driving, birds chirping, children " + verb + ", WAIT! WHAT'S THAT?!"
+
+
+# Madlib Section containing --  
 
 
 # Madlib Section containing --  loop
@@ -38,3 +42,4 @@ while i < int(attack_number):
 	print hero_name + ","
 	i = i+1
 print "in an evil voice."
+
