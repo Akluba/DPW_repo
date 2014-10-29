@@ -18,3 +18,10 @@ verb = raw_input("Enter a verb")
 countdown_number = raw_input("Enter a number between 1-10")
 height_number = raw_input("Now a number between 1-100")
 attack_number = raw_input("And finally, a number between 1-3")
+
+# Array containing different attacks possible
+attacks = ["head","stomach","butt"]
+
+# Dictionary referencing villian to chosen super hero
+villians = dict()
+villians = {"Batman":"Bane","Superman":"General Zod","Spiderman":"Green Goblin"}
