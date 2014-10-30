@@ -1,5 +1,8 @@
-# At least one function
-
+'''
+Anthony Kluba
+DPW1411
+Madlib
+'''
 
 # Opening message to be printed
 print "Welcome to the python Madlib, please provide answers to the following questions:"
@@ -32,6 +35,7 @@ inches = int(height_number) % 12
 
 # Function determining amount of damange done with attack combo
 def attack_points(p1, p2):
+	''' Returns a value based on the combination of attack_area and attack_type selected by input'''
 	attack_sum = int(p1) + int(p2)
 	print attack_sum
 	if attack_sum == 6:
