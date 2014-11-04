@@ -23,10 +23,10 @@ class Page():
 		
 			<label for="cheese">What type of cheese?</label>
 			<select name="cheese" autofocus="autofocus">
-				<option value="none">No Cheese</option>
-				<option value="american">American</option>
-				<option value="swiss">Swiss</option>
-				<option value="cheddar">Cheddar</option>
+				<option value="No Cheese">No Cheese</option>
+				<option value="American Cheese">American</option>
+				<option value="Swiss Cheese">Swiss</option>
+				<option value="Cheddar Cheese">Cheddar</option>
 			</select> 
 			
 			<label for="topping">Choose a Topping?</label>
@@ -43,6 +43,8 @@ class Page():
 			
 			<label for="name">Name For Order?</label> 
 			<input type="text" name="name" autofocus="autofocus" placeholder="What's your name?" />
+			
+			<input type="submit" value="Complete Order!" />
 		"""
 		#var containing html closing elements
 		self.close = """

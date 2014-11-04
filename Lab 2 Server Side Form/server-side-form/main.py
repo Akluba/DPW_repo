@@ -15,7 +15,12 @@ class MainHandler(webapp2.RequestHandler):
         
         #when url params are present print results page
         if self.request.GET:
-        	pass
+        	#GET method variables 
+        	bread = self.request.GET['bread']
+        	cheese = self.request.GET['cheese']
+        	topping = self.request.GET['topping']
+        	where = self.request.GET['where']
+        	name = self.request.GET['name']
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
