@@ -49,3 +49,12 @@ class Page():
 	</body>
 </html>
 		"""
+		#functions returning values
+		def head(self):
+			return self.head
+			
+		def form(self):
+			return self.form
+			
+		def close(self):
+			return self.close
