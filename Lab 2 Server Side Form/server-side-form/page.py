@@ -16,12 +16,25 @@ class Page():
 		self.form = """
 		<form method="GET">
 		
+			<label for="bread" autofocus="autofocus">What type of bread?</label>
+			<input type="radio" name="bread" value="white">White<br>
+			<input type="radio" name="bread" value="potato">Potato<br>
+			<input type="radio" name="bread" value="pretzel roll">Pretzel Roll<br>
+		
 			<label for="cheese">What type of cheese?</label>
 			<select name="cheese" autofocus="autofocus">
 				<option value="none">No Cheese</option>
 				<option value="american">American</option>
 				<option value="swiss">Swiss</option>
 				<option value="cheddar">Cheddar</option>
+			</select> 
+			
+			<label for="topping">Choose a Topping?</label>
+			<select name="topping" autofocus="autofocus">
+				<option value="The Regular">The Regular</option>
+				<option value="Bacon">Bacon</option>
+				<option value="MacnCheese">Mac n Cheese</option>
+				<option value="Fried Egg">Fried Egg</option>
 			</select>  		
 				
 			<label for="where" autofocus="autofocus">For Here or ToGo?</label>
