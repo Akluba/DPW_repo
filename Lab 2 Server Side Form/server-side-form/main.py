@@ -24,12 +24,18 @@ class MainHandler(webapp2.RequestHandler):
         	name = self.request.GET['name']
         	
         	result = '''
-        	<h1>{name}'s Burger Order</h1>
-        	
-        	<p>We have a juicy burger with {cheese}</p>
-        	<p>On top a freshly baked {bread} bun</p>
-        	<p>Topped with {topping}</p>
-        	<p>This is {where}</p>
+        	<header>
+        		<h1>{name}'s Burger Order</h1>
+        	</header>
+        	<div id="result_container">
+        		<div id="burger_img"></div>
+        		<div id="result_text">
+		        	<p>We have a juicy burger with {cheese} cheese</p>
+		        	<p>On top a freshly baked {bread} bun</p>
+		        	<p>Topped with {topping}</p>
+		        	<p>This order is {where}</p>
+		        </div>
+	        </div>
         	'''
         	#format result to be printed 
         	result = result.format(**locals())

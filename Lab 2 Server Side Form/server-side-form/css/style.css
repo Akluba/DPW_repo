@@ -1,3 +1,80 @@
 body{
+	margin: 0;
+	background-image: url("../img/wood.png");
+	overflow: hidden;
+}
+header{
+	height: 95px;
+	width: 100%;
+	background-image: url("../img/checker.png");
+	opacity: .6;
+	padding: 15px 0 0 75px;
+}
+h1{
+	margin: 0;
+	font-size: 72px;
+}
+#container{
+	width: 1048px;
+	margin: 105px auto 0;
+}
+.option_box{
+	height: 225px;
+	width: 180px;
+	background-color: white;
+	float: left;
+	margin-right: 12px; 
+	padding: 10px;
+	-moz-box-shadow: 2px 2px 5px 2px black;
+	-webkit-box-shadow: 2px 2px 5px 2px black;
+  	box-shadow: 2px 2px 5px 2px black;
+}
+#last_box{
+	margin-right: 0;
+}
+label{
+	font-size: 22px;
+	color: red;
+}
+.burger_option{
+	margin-top: 25px;
+	font-size: 20px;
+}
+.burger_option option{
+	font-size: 20px;
+}
+#cust_name{
+	font-size: 20px;
+	width: 173px;
+}
+#submit_button{
+	height: 55px;
+	width: 100%;
 	background-color: red;
+	margin-top: 55px;
+	color: white;
+	font-size: 24px;
+	border: 1px solid white;
+}
+
+#result_container{
+	width: 1048px;
+	margin: 105px auto 0;
+	background-color: white;
+	overflow: hidden;
+}
+#result_text{
+	margin: 75px 0 0 24px;
+	font-size: 32px;
+	float: left;
+	width: 500px;
+}
+p{
+	margin: 0 0 12px 0;
+}
+#burger_img{
+	height: 400px;
+	width: 400px;
+	float: left;
+	background-image: url("../img/burger.png")
 }
