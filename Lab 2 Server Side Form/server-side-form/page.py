@@ -17,9 +17,9 @@ class Page():
 		<form method="GET">
 		
 			<label for="bread" autofocus="autofocus">What type of bread?</label>
-			<input type="radio" name="bread" value="white">White<br>
-			<input type="radio" name="bread" value="potato">Potato<br>
-			<input type="radio" name="bread" value="pretzel roll">Pretzel Roll<br>
+			<input type="radio" name="bread" value="White">White<br>
+			<input type="radio" name="bread" value="Potato">Potato<br>
+			<input type="radio" name="bread" value="Pretzel">Pretzel<br>
 		
 			<label for="cheese">What type of cheese?</label>
 			<select name="cheese" autofocus="autofocus">
