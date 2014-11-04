@@ -30,10 +30,10 @@ class MainHandler(webapp2.RequestHandler):
         	<div id="result_container">
         		<div id="burger_img"></div>
         		<div id="result_text">
-		        	<p>We have a juicy burger with {cheese} cheese</p>
-		        	<p>On top a freshly baked {bread} bun</p>
-		        	<p>Topped with {topping}</p>
-		        	<p>This order is {where}</p>
+		        	<p>We have a juicy burger with <strong>{cheese}</strong> cheese</p>
+		        	<p>On top a freshly baked <strong>{bread}</strong> bun</p>
+		        	<p>Topped with <strong>{topping}</strong></p>
+		        	<p>This order is <strong>{where}</strong></p>
 		        </div>
 	        </div>
         	'''
