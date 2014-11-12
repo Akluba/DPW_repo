@@ -6,9 +6,9 @@ class BacFormula(object):
 	def convert_sex(self, sex):
 		'''converts sex string from user into gender constant num for BAC calculation'''
 		if sex == 'male':
-			self.__gender_constant = 0.68
+			self.__gender_constant = 0.73
 		else:
-			self.__gender_constant = 0.55
+			self.__gender_constant = 0.66
 			
 				
 	def calc_drinks(self,type,num):
@@ -23,14 +23,13 @@ class BacFormula(object):
 	
 	
 	def calc_bac(self,weight,hours):
-		
+		'''figures out blood alcohol percent using figures from users input'''
 		drinks = float(self.__standard_drinks)
 		lbs = float(weight)
 		sex = float(self.__gender_constant)
 		time = float(hours)
 		
-		bac = (drinks * 5.14 / lbs * sex) - (.015 * time)
-		print bac
+		bac = (drinks * 5.14) / (lbs * sex) - (.015 * time)
 		
 		
 
