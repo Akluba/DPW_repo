@@ -1,3 +1,20 @@
+class BacFormula(object):
+	def __init__(self):
+		
+		self.__gender_constant = 0
+		
+		
+		
+	def convert_sex(self, sex):
+		'''converts sex string from user into gender constant num for BAC calculation'''
+		if sex == 'male':
+			self.__gender_constant = 0.68
+		else:
+			self.__gender_constant = 0.55
+		
+
+
+
 #Data Object incharge of storing user data
 class UserInfo(object):
 	def __init__(self):

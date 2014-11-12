@@ -5,7 +5,7 @@ Reusable Library
 11/11/14
 '''
 import webapp2
-from lib import UserInfo
+from lib import UserInfo, BacFormula
 from page import FormPage, ResultPage
 
 class MainHandler(webapp2.RequestHandler):
@@ -19,6 +19,9 @@ class MainHandler(webapp2.RequestHandler):
         #watching for GET method
         #grab variables and write results to browser
         if self.request.GET:
+        
+        	#creating an instance of BacFormula class
+        	bac = BacFormula()
         	
         	#creating an instance of UserInfo to store information
         	user = UserInfo()
@@ -27,7 +30,7 @@ class MainHandler(webapp2.RequestHandler):
         	user.drink_type = self.request.GET['drink']
         	user.drink_num = self.request.GET['number']
         	user.hours = self.request.GET['hours']
-        	
+        	bac.convert_sex(user.sex)
         
         	#write form page to browser
         	self.response.write(result.print_out())
