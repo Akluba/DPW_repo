@@ -1,9 +1,7 @@
 class BacFormula(object):
 	def __init__(self):
-		
 		self.__gender_constant = 0
-		
-		
+		self.__standard_drinks = 0
 		
 	def convert_sex(self, sex):
 		'''converts sex string from user into gender constant num for BAC calculation'''
@@ -11,9 +9,24 @@ class BacFormula(object):
 			self.__gender_constant = 0.68
 		else:
 			self.__gender_constant = 0.55
+			
+				
+	def calc_drinks(self,type,num):
+		'''calculates total number of liquid ounces of alcohol consumed'''
+		if type == 'beer':
+			self.__standard_drinks = float(num) * float(12) * float(.05) 
+		elif type == 'wine':
+			self.__standard_drinks = float(num) * float(5) * float(.50)
+		elif type == 'shot':
+			self.__standard_drinks = float(num) * float(1.25) * float(.40)
 		
-
-
+	
+	
+	def calc_bac(self,weight,hours):
+		
+		
+		
+		
 
 #Data Object incharge of storing user data
 class UserInfo(object):
