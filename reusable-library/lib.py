@@ -24,7 +24,13 @@ class BacFormula(object):
 	
 	def calc_bac(self,weight,hours):
 		
+		drinks = float(self.__standard_drinks)
+		lbs = float(weight)
+		sex = float(self.__gender_constant)
+		time = float(hours)
 		
+		bac = (drinks * 5.14 / lbs * sex) - (.015 * time)
+		print bac
 		
 		
 
