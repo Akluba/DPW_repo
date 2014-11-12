@@ -5,7 +5,8 @@ Reusable Library
 11/11/14
 '''
 import webapp2
-from page import FormPage, ResultPage
+from lib import MovieData
+from page import UserInfo
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -18,6 +19,8 @@ class MainHandler(webapp2.RequestHandler):
         #watching for GET method
         #grab variables and write results to browser
         if self.request.GET:
+                	
+        
         	#write form page to browser
         	self.response.write(result.print_out())
         else:
