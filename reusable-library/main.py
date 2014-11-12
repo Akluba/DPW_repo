@@ -5,8 +5,8 @@ Reusable Library
 11/11/14
 '''
 import webapp2
-from lib import MovieData
-from page import UserInfo
+from lib import UserInfo
+from page import FormPage, ResultPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
