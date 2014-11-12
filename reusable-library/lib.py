@@ -29,8 +29,8 @@ class BacFormula(object):
 		sex = float(self.__gender_constant)
 		time = float(hours)
 		
-		bac = (drinks * 5.14) / (lbs * sex) - (.015 * time)
-		
+		bac = round((drinks * 5.14) / (lbs * sex) - (.015 * time),3)
+		return 'Your BAC is: ' + str(bac)
 		
 
 #Data Object incharge of storing user data

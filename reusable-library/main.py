@@ -35,6 +35,8 @@ class MainHandler(webapp2.RequestHandler):
         	bac.convert_sex(user.sex)
         	bac.calc_drinks(user.drink_type, user.drink_num)
         	bac.calc_bac(user.weight,user.hours)
+        	
+        	result.result = bac.calc_bac(user.weight,user.hours)
         
         	#write form page to browser
         	self.response.write(result.print_out())

@@ -69,11 +69,12 @@ class ResultPage(object):
 	<body>
 	"""
 		self.body = "<h1>Results</h1>"
+		self.result = ""
 		self.__close = """
 	</body>
 </html>
 	"""
 
 	def print_out(self):
-		all = self.__head + self.body + self.__close
+		all = self.__head + self.body + self.result + self.__close
 		return all
