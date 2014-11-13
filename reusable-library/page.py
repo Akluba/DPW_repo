@@ -67,12 +67,15 @@ class ResultPage(object):
 	<head>
 		<title>BAC</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" >
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,200' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+		<div id="container">
 	"""
-		self.body = "<h1>Results</h1>"
+		self.body = ""
 		self.result = ""
 		self.__close = """
+		</div>
 	</body>
 </html>
 	"""

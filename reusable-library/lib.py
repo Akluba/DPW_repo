@@ -32,14 +32,14 @@ class BacFormula(object):
 		bac = round((drinks * 5.14) / (lbs * sex) - (.015 * time),3)
 		if bac > .08:
 			return """
-	<div id="over_limit">
+		<h1>According to your BAC results, you are over the legal limit of .08. You need to hope in the nearest cab!</h1>
 		<h2>Your BAC is: """  + str(bac) + """</h2>
-	</div> """
+		<div id="over_limit"></div> """
 		else:
 			return """
-	<div id="under_limit">
+		<h1>According to your BAC results, you are under the legal limit of .08. Use caution, but you may legally drive home. </h1>
 		<h2>Your BAC is: """  + str(bac) + """</h2>
-	</div> """
+		<div id="under_limit"></div> """
 		
 
 #Data Object incharge of storing user data
