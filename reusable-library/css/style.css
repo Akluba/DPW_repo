@@ -1,19 +1,69 @@
 body{
 	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+h1{
+	margin: 0;
+	color: #8B92A4;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 42px;
+}
+h2{
+	margin: 12px 0 0;
+	color: #BDBDC4;
+	font-weight: 400;
+	font-size: 32px;
+}
+#container{
+	height: 300px;
+	width: 800px;
+	margin: 50px auto 0;
+	padding: 20px;
+	border-radius: 10px;
+}
+#page_text{
+	width: 400px;
+	float: left;
+}
+#questions{
+	width: 350px;
+	float: right;
+}
+.option_box{
+	display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+    width: 350px;
+    float: right;
+    margin-bottom: 15px;
+}
+label{
+	line-height: 30px;
+	font-weight: 200;
+	color: #0E1C29;
+}
+.input_num{
+	height: 25px;
+	width: 60px;
+	border: 1px solid #8B92A4;
+}
+#submit_button{
+	width: 350px;
+	height: 45px;
+	border: 1px solid #081725;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
 }
 #car_img{
 	height: 200px;
-	width: 960px;
+	width: 800px;
 	background-image: url('../img/car_split.png');
 	position: absolute;
 	bottom: 0;
-}
-#container{
-	height: 100px;
-	width: 400px;
-	margin: 50px auto 0;
-	padding: 20px;
-	border: 20px solid black;
-	border-radius: 10px;
-	background-color: white;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 }
