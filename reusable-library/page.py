@@ -7,6 +7,32 @@ class FormPage(object):
 		<title>BAC</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" >
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,200' rel='stylesheet' type='text/css'>
+		<script>
+		function validateForm() {
+		    var sex = document.forms["form"]["sex"].value,
+		    	weight = document.forms["form"]["weight"].value,
+		    	drink = document.forms["form"]["drink"].value,
+		    	number = document.forms["form"]["number"].value,
+		    	hours = document.forms["form"]["hours"].value;
+		    	
+		    if (sex==null || sex=="") {
+		        alert("Please enter Sex");
+		        return false;
+		    }else if(weight==null || weight==""){
+		    	alert("Please enter Weight");
+		        return false;
+		    }else if(drink==null || drink==""){
+		    	alert("Please enter drink type");
+		        return false;
+		    }else if(number==null || number==""){
+		    	alert("Please enter number of drinks");
+		        return false;
+		    }else if(hours==null || hours==""){
+		    	alert("Please enter hours since first drink");
+		        return false;
+		    }
+		}
+		</script>
 	</head>
 	<body>
 	"""
@@ -16,7 +42,7 @@ class FormPage(object):
 				<h1>Having a hard time deciding on whether to drive or not?</h1> 
 				<h2>Use this blood alcohol concentration calculator to find which ride you need to take!</h2>
 			</div>
-			<form method="GET">
+			<form name="form" method="GET" onsubmit="return validateForm()">
 				<div id="questions">
 					<div class="option_box">
 						<label for="sex">Sex?</label>
