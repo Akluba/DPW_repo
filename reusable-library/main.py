@@ -31,11 +31,12 @@ class MainHandler(webapp2.RequestHandler):
         	user.drink_num = self.request.GET['number']
         	user.hours = self.request.GET['hours']
         	
-        	
+        	#send sex value to convert_sex function
         	bac.convert_sex(user.sex)
+        	#sending drink_type and drink_num values to calc_drink fuction
         	bac.calc_drinks(user.drink_type, user.drink_num)
-        	bac.calc_bac(user.weight,user.hours)
         	
+        	#setting result to results of calc_bac function to be displayed
         	result.result = bac.calc_bac(user.weight,user.hours)
         
         	#write form page to browser

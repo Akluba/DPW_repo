@@ -1,3 +1,4 @@
+#containing html elements for form view
 class FormPage(object):
 	def __init__(self):
 		self.__head = """
@@ -84,7 +85,7 @@ class FormPage(object):
 		return all
 		
 		
-		
+#containing html to be displayed on results
 class ResultPage(object):
 	def __init__(self):
 		self.__head = """
@@ -98,7 +99,6 @@ class ResultPage(object):
 	<body>
 		<div id="container">
 	"""
-		self.body = ""
 		self.result = ""
 		self.__close = """
 		</div>
@@ -107,5 +107,5 @@ class ResultPage(object):
 	"""
 
 	def print_out(self):
-		all = self.__head + self.body + self.result + self.__close
+		all = self.__head + self.result + self.__close
 		return all
