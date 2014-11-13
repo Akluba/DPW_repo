@@ -1,0 +1,19 @@
+body{
+	margin: 0;
+}
+#car_img{
+	height: 200px;
+	width: 960px;
+	background-image: url('../img/car_split.png');
+	position: absolute;
+	bottom: 0;
+}
+#container{
+	height: 100px;
+	width: 400px;
+	margin: 50px auto 0;
+	padding: 20px;
+	border: 20px solid black;
+	border-radius: 10px;
+	background-color: white;
+}

@@ -16,7 +16,7 @@ class BacFormula(object):
 		if type == 'beer':
 			self.__standard_drinks = float(num) * float(12) * float(.05) 
 		elif type == 'wine':
-			self.__standard_drinks = float(num) * float(5) * float(.50)
+			self.__standard_drinks = float(num) * float(5) * float(.12)
 		elif type == 'shot':
 			self.__standard_drinks = float(num) * float(1.25) * float(.40)
 		
@@ -30,7 +30,16 @@ class BacFormula(object):
 		time = float(hours)
 		
 		bac = round((drinks * 5.14) / (lbs * sex) - (.015 * time),3)
-		return 'Your BAC is: ' + str(bac)
+		if bac > .08:
+			return """
+	<div id="over_limit">
+		<h2>Your BAC is: """  + str(bac) + """</h2>
+	</div> """
+		else:
+			return """
+	<div id="under_limit">
+		<h2>Your BAC is: """  + str(bac) + """</h2>
+	</div> """
 		
 
 #Data Object incharge of storing user data
