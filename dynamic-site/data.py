@@ -15,3 +15,12 @@ class Data(DataObject):
 	def __init__(self):
 		#init as subclass of DataObject superclass
 		super(Data, self).__init__()
+		
+		anthony = DataObject()
+		anthony._name = 'Anthony Kluba'
+		anthony._team = 'FullSail University'
+		anthony._at_bats = 3
+		anthony._hits = 3
+		anthony._strike_outs = 2
+		anthony._walks = 4
+		anthony._hit_bys 1
