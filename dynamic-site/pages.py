@@ -24,11 +24,11 @@ class ContentPage(Page):
 		#init as subclass of our Page superclass
 		super(ContentPage, self).__init__()
 		self._nav = '''
-		<a href="?play=anthony">Anthony</a>
-		<a href="?play=anthony">Anthony</a>
-		<a href="?play=anthony">Anthony</a>
-		<a href="?play=anthony">Anthony</a>
-		<a href="?play=anthony">Anthony</a>'''
+		<a href="?player=altuve">Jose Altuve</a>
+		<a href="?player=martinez">Victor Martinez</a>
+		<a href="?player=brantley">Michael Brantley</a>
+		<a href="?player=beltre">Adrian Beltre</a>
+		<a href="?player=abreu">Jose Abreu</a>'''
 		
 	def print_out(self):
 		return self._head + self._nav + self._close
