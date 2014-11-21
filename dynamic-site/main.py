@@ -15,7 +15,7 @@ class MainHandler(webapp2.RequestHandler):
         page = ContentPage()
         data = Data()
         
-        print data.altuve
+        print data.player_array[0].name
                 
         #watching for GET method
         #result dependent on player
