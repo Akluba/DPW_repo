@@ -30,6 +30,16 @@ class ContentPage(Page):
 		<a href="?player=brantley">Michael Brantley</a>
 		<a href="?player=beltre">Adrian Beltre</a>
 		<a href="?player=abreu">Jose Abreu</a>'''
+		self._result = '''
+		<h1>{obj.name}<h1>
+		'''
+		
+	def template(self,obj):
+		result = self._result.format(**locals())
+		return result
 		
 	def print_out(self):
 		return self._head + self._nav + self._close
+		
+	def print_results(self):
+		return self._head + self._nav + self.__template + self._close 

@@ -15,7 +15,7 @@ class MainHandler(webapp2.RequestHandler):
         page = ContentPage()
         data = Data()
         
-        print data.altuve.name
+        print data.altuve
                 
         #watching for GET method
         #result dependent on player
@@ -23,8 +23,8 @@ class MainHandler(webapp2.RequestHandler):
         	player = self.request.GET['player']
         	print player
         	if player == "altuve":
-        		#display players stats
-        		pass
+        		page.template(data.altuve)
+        		self.response.write(page.template(data.altuve))
         	elif player == "martinez":
         		pass
         	elif player == "brantley":
