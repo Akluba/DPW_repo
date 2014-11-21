@@ -23,6 +23,7 @@ class ContentPage(Page):
 	def __init__(self):
 		#init as subclass of our Page superclass
 		super(ContentPage, self).__init__()
+		#html elements linking players
 		self._nav = '''
 		<a href="?player=altuve">Jose Altuve</a>
 		<a href="?player=martinez">Victor Martinez</a>

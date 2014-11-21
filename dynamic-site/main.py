@@ -14,6 +14,12 @@ class MainHandler(webapp2.RequestHandler):
         
         page = ContentPage()
         self.response.write(page.print_out())
+        
+        #watching for GET method
+        #result dependent on player
+        if self.request.GET:
+        	player = self.request.GET['player']
+        	print player
                 	
 
 app = webapp2.WSGIApplication([
