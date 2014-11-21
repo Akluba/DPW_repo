@@ -2,24 +2,24 @@
 class DataObject(object):
 	def __init__(self):
 		#attributes of baseball player
-		self._name = ''
-		self._img = ''
-		self._at_bats = 0
-		self._hits = 0
-		self._strike_outs = 0
-		self._walks = 0
+		self.__name = ''
+		self.__img = ''
+		self.__at_bats = 0
+		self.__hits = 0
+		self.__strike_outs = 0
+		self.__walks = 0
 		
 #Class contains instances of hard coded objects	
 class Data(object):
 	def __init__(self):
 		#player1
-		altuve = DataObject()
-		altuve._name = 'Jose Altuve'
-		altuve._img = 'http://a.espncdn.com/combiner/i?img=/i/headshots/mlb/players/full/31662.png&w=350&h=254'
-		altuve._at_bats = 660
-		altuve._hits = 225
-		altuve._strike_outs = 53
-		altuve._walks = 36
+		self.altuve = DataObject()
+		self.altuve.name = 'Jose Altuve'
+		self.altuve.__img = 'http://a.espncdn.com/combiner/i?img=/i/headshots/mlb/players/full/31662.png&w=350&h=254'
+		self.altuve.__at_bats = 660
+		self.altuve.__hits = 225
+		self.altuve.__strike_outs = 53
+		self.altuve.__walks = 36
 		#player2
 		martinez = DataObject()
 		martinez._name = 'Victor Martinez'

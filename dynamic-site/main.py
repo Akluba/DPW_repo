@@ -13,14 +13,29 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         
         page = ContentPage()
-        self.response.write(page.print_out())
+        data = Data()
         
+        print data.altuve.name
+                
         #watching for GET method
         #result dependent on player
         if self.request.GET:
         	player = self.request.GET['player']
         	print player
-                	
+        	if player == "altuve":
+        		#display players stats
+        		pass
+        	elif player == "martinez":
+        		pass
+        	elif player == "brantley":
+        		pass
+        	elif player == "beltre":
+        		pass
+        	elif player == "abreu":
+        		pass
+        #html written to browser before link is clicked
+        else:
+        	self.response.write(page.print_out())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
