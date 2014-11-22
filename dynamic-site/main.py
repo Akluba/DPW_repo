@@ -22,8 +22,8 @@ class MainHandler(webapp2.RequestHandler):
         	player = self.request.GET['player']
         	print player
         	if player == "altuve":
-        		print data.player_array[0].name
-        		# page.result(data.player_array[0].name)
+        		print data.player_array[0]
+        		page.result = data.player_array[0]
         	elif player == "martinez":
         		print data.player_array[1]
         	elif player == "brantley":
@@ -32,6 +32,8 @@ class MainHandler(webapp2.RequestHandler):
         		print data.player_array[3]
         	elif player == "abreu":
         		print data.player_array[4]
+        		
+        	self.response.write(page.print_out())
         		
         #html written to browser before link is clicked
         else:

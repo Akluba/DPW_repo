@@ -29,7 +29,8 @@ class ContentPage(Page):
 		<a href="?player=martinez">Victor Martinez</a>
 		<a href="?player=brantley">Michael Brantley</a>
 		<a href="?player=beltre">Adrian Beltre</a>
-		<a href="?player=abreu">Jose Abreu</a>'''
+		<a href="?player=abreu">Jose Abreu</a>
+		'''
 		self._result = ''
 		
 	@property
@@ -38,7 +39,12 @@ class ContentPage(Page):
 		
 	@result.setter
 	def result(self, obj):
-		self._result = obj
+		self._result += '<h1>' + obj.name + '</h1>'
+		self._result += '<img src="' + obj.img + '" alt="player_img">'
+		self._result += '<h2>At Bats: ' + str(obj.at_bats) + '</h2>'
+		self._result += '<h2>Hits: ' + str(obj.hits) + '</h2>'
+		self._result += '<h2>Strike Outs: ' + str(obj.strike_outs) + '</h2>'
+		self._result += '<h2>Walks: ' + str(obj.walks) + '</h2>'
 				
 	def print_out(self):
 		return self._head + self._nav + self._result + self._close
