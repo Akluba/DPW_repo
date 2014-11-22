@@ -21,18 +21,23 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
         	player = self.request.GET['player']
         	print player
+        	#sending objects to setter on player link
         	if player == "altuve":
         		print data.player_array[0]
         		page.result = data.player_array[0]
         	elif player == "martinez":
         		print data.player_array[1]
+        		page.result = data.player_array[1]
         	elif player == "brantley":
         		print data.player_array[2]
+        		page.result = data.player_array[2]
         	elif player == "beltre":
         		print data.player_array[3]
+        		page.result = data.player_array[3]
         	elif player == "abreu":
         		print data.player_array[4]
-        		
+        		page.result = data.player_array[4]
+        	#html elements written to browser	
         	self.response.write(page.print_out())
         		
         #html written to browser before link is clicked
