@@ -27,11 +27,14 @@ class ContentPage(Page):
 		super(ContentPage, self).__init__()
 		#html elements linking players
 		self._nav = '''
-		<a href="?player=altuve">Jose Altuve</a>
-		<a href="?player=martinez">Victor Martinez</a>
-		<a href="?player=brantley">Michael Brantley</a>
-		<a href="?player=beltre">Adrian Beltre</a>
-		<a href="?player=abreu">Jose Abreu</a>
+		<div id="container">
+			<div id="player_links">
+				<a href="?player=altuve">Jose Altuve</a>
+				<a href="?player=martinez">Victor Martinez</a>
+				<a href="?player=brantley">Michael Brantley</a>
+				<a href="?player=beltre">Adrian Beltre</a>
+				<a href="?player=abreu">Jose Abreu</a>
+			</div>
 		'''
 		#will contain html elements of player instance 
 		self._result = ''
@@ -50,13 +53,18 @@ class ContentPage(Page):
 		avg = float(obj.hits) / float(obj.at_bats)
 		batting_avg = round(avg,3)
 		
-		self._result += '''<h1>''' + obj.name + '''</h1>\n		'''
-		self._result += '''<img src="''' + obj.img + '''" alt="player_img">\n		'''
-		self._result += '<h2>At Bats: ' + str(obj.at_bats) + '</h2>\n		'''
-		self._result += '<h2>Hits: ' + str(obj.hits) + '</h2>\n		'''
-		self._result += '<h2>Strike Outs: ' + str(obj.strike_outs) + '</h2>\n		'''
-		self._result += '<h2>Walks: ' + str(obj.walks) + '</h2>\n		'''
-		self._result += '<h2>Batting Average: ' + str(batting_avg) + '</h2>'
+		self._result += '''	<div id="player_info">\n				'''
+		self._result += '''<h1>''' + obj.name + '''</h1>\n			'''
+		self._result += '''	<img src="''' + obj.img + '''" alt="player_img">\n			'''
+		self._result += '''</div>\n		'''
+		self._result += '''	<div id="player_stats">\n				'''
+		self._result += '<h2><strong>At Bats:</strong> ' + str(obj.at_bats) + '</h2>\n				'''
+		self._result += '<h2 class="odd"><strong>Hits:</strong> ' + str(obj.hits) + '</h2>\n				'''
+		self._result += '<h2><strong>Strike Outs:</strong> ' + str(obj.strike_outs) + '</h2>\n				'''
+		self._result += '<h2 class="odd"><strong>Walks:</strong> ' + str(obj.walks) + '</h2>\n				'''
+		self._result += '<h2><strong>Batting Average:</strong> ' + str(batting_avg) + '</h2>\n			'''
+		self._result += '''</div>\n		'''
+		self._result += '''</div>'''
 		
 	#function responsible for returning html elements 
 	#to be written to browser		
