@@ -19,9 +19,12 @@ class Page(object):
 	#function responsible for returning Page variables
 	def print_out(self):
 		return self._head + self._body + self._close
-		
-	def __calc_ba():
-		batting_average = at_bats / hits
+	
+	#this is my polymorphic function 
+	#an average site could use this function
+	#to calculate site data
+	def __calc_avg():
+		pass
 		
 #ContentPage subclass 		
 class ContentPage(Page):
@@ -46,20 +49,22 @@ class ContentPage(Page):
 	@property
 	def result(self):
 		pass
-		
-	def __calc_ba(self, obj):
+	
+	#polymorphic function overriding Page class __calc_avg
+	#in ContentPage the function is used to
+	#calculate players batting average
+	def __calc_avg(self, obj):
 		avg = float(obj.hits) / float(obj.at_bats)
 		batting_average = round(avg,3)
-		
+		#return value to be printed 
 		return batting_average
 	
 	#responsible for setting self._result
 	#to html elements	
 	@result.setter
 	def result(self, obj):
-		#calculation of batting average 
-		#takes players hits devided by at_bats
-		batting_avg = self.__calc_ba(obj)
+		#pass obj to calc_avg function
+		batting_avg = self.__calc_avg(obj)
 	
 		self._result += '''	<div id="player_info">\n				'''
 		self._result += '''<h1>''' + obj.name + '''</h1>\n			'''
