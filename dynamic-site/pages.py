@@ -40,6 +40,12 @@ class ContentPage(Page):
 				<a href="?player=brantley">Michael Brantley</a>
 				<a href="?player=beltre">Adrian Beltre</a>
 				<a href="?player=abreu">Jose Abreu</a>
+			</div>'''
+		#html static element to display before player is clicked
+		self._static = '''
+			<div id="static_player_info">
+				<h1>American League Top 5 Batting Averages</h1>
+				<h2>Choose a player from above to see stats</h2>
 			</div>
 		'''
 		#will contain html elements of player instance 
@@ -81,7 +87,7 @@ class ContentPage(Page):
 		self._result += '''</div>\n		'''
 	
 	def print_out(self):
-		return self._head + self._nav + self._close_result + self._close
+		return self._head + self._nav + self._static + self._close_result + self._close
 	
 	#function responsible for returning html elements 
 	#to be written to browser		

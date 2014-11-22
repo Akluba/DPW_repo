@@ -44,6 +44,15 @@ background: #4c4c4c; /* Old browsers */
 #player_links a:hover{
 	background-color: rgba(0,0,0,.3);
 }
+/* ###################### Static Player Info ###################### */
+#static_player_info{
+	clear: both;
+	float: left;
+	width: 960px;
+	height: 307px;
+	margin-top: 5px;
+	background-color: rgba(0,0,0,.5);
+}
 /* ###################### Player Info ###################### */
 #player_info{
 	clear: both;
