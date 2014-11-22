@@ -5,7 +5,7 @@ class Page(object):
 		self._head = '''<!DOCTYPE HTML>
 <html>
 	<head>
-		<title></title>
+		<title>American League Top5 Batting Average</title>
 	</head>
 	<body>'''
 		#html elements belong here
@@ -31,21 +31,33 @@ class ContentPage(Page):
 		<a href="?player=beltre">Adrian Beltre</a>
 		<a href="?player=abreu">Jose Abreu</a>
 		'''
+		#will contain html elements of player instance 
 		self._result = ''
-		
+	
+	#inactive getter
 	@property
 	def result(self):
 		pass
-		
+	
+	#responsible for setting self._result
+	#to html elements	
 	@result.setter
 	def result(self, obj):
-		self._result += '<h1>' + obj.name + '</h1>'
-		self._result += '<img src="' + obj.img + '" alt="player_img">'
-		self._result += '<h2>At Bats: ' + str(obj.at_bats) + '</h2>'
-		self._result += '<h2>Hits: ' + str(obj.hits) + '</h2>'
-		self._result += '<h2>Strike Outs: ' + str(obj.strike_outs) + '</h2>'
-		self._result += '<h2>Walks: ' + str(obj.walks) + '</h2>'
-				
+		#calculation of batting average 
+		#takes players hits devided by at_bats
+		avg = float(obj.hits) / float(obj.at_bats)
+		batting_avg = round(avg,3)
+		
+		self._result += '''<h1>''' + obj.name + '''</h1>\n		'''
+		self._result += '''<img src="''' + obj.img + '''" alt="player_img">\n		'''
+		self._result += '<h2>At Bats: ' + str(obj.at_bats) + '</h2>\n		'''
+		self._result += '<h2>Hits: ' + str(obj.hits) + '</h2>\n		'''
+		self._result += '<h2>Strike Outs: ' + str(obj.strike_outs) + '</h2>\n		'''
+		self._result += '<h2>Walks: ' + str(obj.walks) + '</h2>\n		'''
+		self._result += '<h2>Batting Average: ' + str(batting_avg) + '</h2>'
+		
+	#function responsible for returning html elements 
+	#to be written to browser		
 	def print_out(self):
 		return self._head + self._nav + self._result + self._close
 		
