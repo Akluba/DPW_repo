@@ -38,7 +38,7 @@ class MainHandler(webapp2.RequestHandler):
         		print data.player_array[4]
         		page.result = data.player_array[4]
         	#html elements written to browser	
-        	self.response.write(page.print_out())
+        	self.response.write(page.print_out_result())
         		
         #html written to browser before link is clicked
         else:

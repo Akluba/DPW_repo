@@ -44,6 +44,8 @@ class ContentPage(Page):
 		'''
 		#will contain html elements of player instance 
 		self._result = ''
+		#close result div
+		self._close_result = '''</div>'''
 	
 	#inactive getter
 	@property
@@ -77,10 +79,12 @@ class ContentPage(Page):
 		self._result += '<h2 class="odd"><strong>Walks:</strong> ' + str(obj.walks) + '</h2>\n				'''
 		self._result += '<h2><strong>Batting Average:</strong> ' + str(batting_avg) + '</h2>\n			'''
 		self._result += '''</div>\n		'''
-		self._result += '''</div>'''
-		
+	
+	def print_out(self):
+		return self._head + self._nav + self._close_result + self._close
+	
 	#function responsible for returning html elements 
 	#to be written to browser		
-	def print_out(self):
-		return self._head + self._nav + self._result + self._close
+	def print_out_result(self):
+		return self._head + self._nav + self._result + self._close_result + self._close
 		
