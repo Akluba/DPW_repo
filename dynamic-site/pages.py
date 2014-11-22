@@ -20,6 +20,9 @@ class Page(object):
 	def print_out(self):
 		return self._head + self._body + self._close
 		
+	def __calc_ba():
+		batting_average = at_bats / hits
+		
 #ContentPage subclass 		
 class ContentPage(Page):
 	def __init__(self):
@@ -43,6 +46,12 @@ class ContentPage(Page):
 	@property
 	def result(self):
 		pass
+		
+	def __calc_ba(self, obj):
+		avg = float(obj.hits) / float(obj.at_bats)
+		batting_average = round(avg,3)
+		
+		return batting_average
 	
 	#responsible for setting self._result
 	#to html elements	
@@ -50,9 +59,8 @@ class ContentPage(Page):
 	def result(self, obj):
 		#calculation of batting average 
 		#takes players hits devided by at_bats
-		avg = float(obj.hits) / float(obj.at_bats)
-		batting_avg = round(avg,3)
-		
+		batting_avg = self.__calc_ba(obj)
+	
 		self._result += '''	<div id="player_info">\n				'''
 		self._result += '''<h1>''' + obj.name + '''</h1>\n			'''
 		self._result += '''	<img src="''' + obj.img + '''" alt="player_img">\n			'''

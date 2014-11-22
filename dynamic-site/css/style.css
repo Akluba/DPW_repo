@@ -24,6 +24,7 @@ background: #4c4c4c; /* Old browsers */
 #player_links{
 	height: 100px;
 }
+/* ###################### Nav ###################### */
 #player_links a{
 	display: block;
 	float: left;
@@ -43,7 +44,7 @@ background: #4c4c4c; /* Old browsers */
 #player_links a:hover{
 	background-color: rgba(0,0,0,.3);
 }
-
+/* ###################### Player Info ###################### */
 #player_info{
 	clear: both;
 	float: left;
@@ -60,7 +61,7 @@ h1{
 	padding: 12px 0 0 12px;
 	color: white;
 }
-
+/* ###################### Player Stats ###################### */
 #player_stats{
 	float: right;
 	width: 475px;
