@@ -12,27 +12,27 @@ from data import Data
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         
+        #creating instances of imported classes
         page = ContentPage()
         data = Data()
-        
-        print data.player_array[0].name
-                
+            
         #watching for GET method
         #result dependent on player
         if self.request.GET:
         	player = self.request.GET['player']
         	print player
         	if player == "altuve":
-        		page.template(data.altuve)
-        		self.response.write(page.template(data.altuve))
+        		print data.player_array[0].name
+        		# page.result(data.player_array[0].name)
         	elif player == "martinez":
-        		pass
+        		print data.player_array[1]
         	elif player == "brantley":
-        		pass
+        		print data.player_array[2]
         	elif player == "beltre":
-        		pass
+        		print data.player_array[3]
         	elif player == "abreu":
-        		pass
+        		print data.player_array[4]
+        		
         #html written to browser before link is clicked
         else:
         	self.response.write(page.print_out())
